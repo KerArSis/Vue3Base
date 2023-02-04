@@ -1,19 +1,21 @@
 <script>
-  export default{
-    data(){
-      
+  export default {
+    data() {
+      return {
+        num1: 1,
+        num2: 2,
+      }      
     },
     methods: {
-      show: function(){
-        alert(new Date());
+      show: function() {
+        alert(this.num1+ this.num2);
       }
     }
   }
 </script>
 
 <template>
-    <button @click="show"> text </button>
-    <button @mouseenter="show"> text </button>
+    <button @click="show">sum</button>
 </template>
 
 <style>
