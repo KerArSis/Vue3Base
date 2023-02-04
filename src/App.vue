@@ -2,30 +2,27 @@
   export default {
     data() {
       return {
-        cost: '150',
-        amount: '5',
-      }
-    },
-    computed: {
-      price: function() {
-      return this.cost * this.amount;
+        num1: 1,
+        num2: 2,
+        text: 'Sum'
       }
     },
     methods: {
-      change: function() {
-      this.cost = '200'
+      show: function() {
+      let text = this.cape(this.text)
+      alert(this.num1 + this.num2);
+      },
+      cape: function(str) {
+      return str[0].toUpperCase() + str.slice(1);
       }
     }
   }
 </script>
 
 <template>
-  <p>{{ cost }}</p>
-  <p>{{ amount }}</p>
-  <p>{{ price }}</p>
-  <button @click="change">cost</button>
+  <a @click.prevent href="https://github.com/KerArSis">GitHub</a>
+  <button @click.once="show">click</button>
 </template>
-
 
 <style>
 
