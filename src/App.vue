@@ -2,22 +2,24 @@
   export default{
     data(){
       return{
+        text: 'text',
       }
     },
     methods: {
-      show: function(str){
-        alert(str*str);
+      change: function() {
+        this.text = 'ууу';
       },
-      show1: function(str1){
-        alert(str1*str1)
+      change1: function() {
+        this.text = 'ааа'
       }
     }
   }
 </script>
 
 <template>
-  <button @click="show(2)">квадрат числа 2</button>
-  <button @click="show1(3)">квадрат числа 3</button>
+  <p> {{ text }} </p>
+  <button @click="change">Text 1</button>
+  <button @click="change1">Text 2</button>
 </template>
 
 <style>
