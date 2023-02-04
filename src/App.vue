@@ -2,16 +2,16 @@
   export default {
     data() {
       return {
-        visible1: true,
-        visible2: false,
+        hidden1: true,
+        hidden2: false,
       }
     },
   }
 </script>
 
 <template>
-  <div v-if="visible1">True</div>
-  <div v-if="!visible2">False</div>
+  <div v-if="hidden1">True</div>
+  <div v-if="!hidden2">False</div>
 </template>
 
 <style>
