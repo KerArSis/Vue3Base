@@ -1,15 +1,19 @@
 <script>
-export default {
-  data() {
-    return {
-      text: 'page',
-      href: 'page.html',
+  export default{
+    data(){
+      return{
+        num: 5,
+        num1: 1,
+        num2: 2,
+        num3: 3,
+      }
     }
   }
-}
 </script>
+
 <template>
-  <a href="page.html">page</a>
+  {{num * num}} 
+  {{num1 + num2 + num3}}
 </template>
 
 <style>
