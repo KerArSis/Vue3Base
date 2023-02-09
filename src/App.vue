@@ -23,12 +23,12 @@
 
 <template>
   <button @click="Alex">Alex</button>
-  <p v-if="visible">Alex</p>
+  <p>{{visible ? 'Alex' : '!'}}</p>
   <button @click="Jason">Jason</button>
-  <p v-if="visible2">Jason</p>
+  <p>{{visible2 ? 'Jason' : '!'}}</p>
   <button @click="Paul">Paul</button>
-  <p v-if="visible3">Paul</p>
-  </template>
+  <p>{{visible3 ? 'Paul' : '!'}}</p>
+</template>
 
 <style>
 
