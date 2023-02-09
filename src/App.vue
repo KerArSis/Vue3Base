@@ -1,17 +1,25 @@
 <script>
-  export default {
-    data() {
+	export default {
+		data() {
       return {
-        hidden1: true,
-        hidden2: false,
-      }
-    },
-  }
+        visible: true,
+	}
+  },
+  methods: {
+	hide: function() {
+		this.visible = false;
+	},
+  mide: function() {
+		this.visible = true;
+	}
+}
+  
+	}
 </script>
-
 <template>
-  <div v-if="hidden1">True</div>
-  <div v-if="!hidden2">False</div>
+  <button @click="hide">hide</button>
+  <button @click="visible">visible</button>
+	<p v-if="visible">text</p>
 </template>
 
 <style>
