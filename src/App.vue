@@ -1,25 +1,20 @@
 <script>
-  export default {
-    data() {
-      return {
-        bmw: true,
+  export default{
+    data(){
+      return{
+        isAuth: true,
       }
     },
     methods: {
-      BMW: function() {
-        this.bmw = false;
+      BMW: function(){
+        this.isAuth = false;
       }
     }
   }
 </script>
-
 <template>
   <button @click="BMW">BMW</button>
-  <div v-if="bmw">
-  <p>Alex</p>
-  <p>Jason</p>
-  <p>Paul</p>
-  </div>
+  <p v-show="isAuth">text</p>
 </template>
 
 <style>
