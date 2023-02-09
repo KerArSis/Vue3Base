@@ -1,13 +1,16 @@
 <script>
-  export default{
-    data(){
-      return{
-      }
-    },
-  }
+export default{
+data(){
+return{
+    isValid: true,
+    isDisabled: true,
+}
+}
+}
 </script>
+
 <template>
-  <p :class="{active: true, error: false}">Conclave</p>
+<p :class="{valid: isValid, disable: isDisabled}">Conclave</p>
 </template>
 
 <style>
