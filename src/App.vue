@@ -2,19 +2,17 @@
   export default{
     data(){
       return{
-        isAuth: true,
-      }
-    },
-    methods: {
-      BMW: function(){
-        this.isAuth = false;
+        items: [1, 2, 3, 4, 5],
       }
     }
   }
 </script>
 <template>
-  <button @click="BMW">BMW</button>
-  <p v-show="isAuth">text</p>
+  <div v-for="elem in items">{{ elem }}</div>
+  <br>
+  <div v-for="elem in items">{{ elem*elem }}</div>
+  <br>
+  <ul v-for="elem in items">{{ elem }}</ul>
 </template>
 
 <style>
