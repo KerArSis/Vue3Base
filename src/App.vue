@@ -1,35 +1,26 @@
-script>
+<script>
 export default{
 data(){
 return{
-    num: 0,
-    res: 0,
-sum: 0,
-num1: 0, 
-num2: 0,
+    text: ' ',
+    conclave: ' ',
 }
 },
 methods: {
-Calc: function () {
-    this.res = Math.sqrt(this.num);
-},
-Sum:function(){
-    this.sum = this.num1 + this.num2;
+list: function(){
 }
 }
 }
 </script>
 
 <template>
-<p>{{ res }}</p>
-<input class="text-field__input" v-model="num">
-<button @click="Calc">sqrt</button>
+<textarea class="text-field__input" v-model="text"></textarea>
+<p>{{ text }}</p>
 <br>
-<p>{{ sum }}</p>
-<input class="text-field__input" v-model=num1>
-<input class="text-field__input" v-model=num2>
-<button @click="Sum">сумма</button>
-<br>
+<button @click="Alex">Alex</button>
+<ul>
+<li v-for="Text in text">{{ Text }}</li>
+</ul>
 </template>
 
 <style>
