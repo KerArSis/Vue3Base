@@ -1,15 +1,22 @@
-script>
+<script>
 export default{
 data(){
 return{
+message: 'Arsen',
+number: 'Kerimov',
 }
+},
+methods: {
 }
 }
 </script>
 
 <template>
-<p :style="{color: 'green', background: 'yellow'}">Alex</p>
-<p :style="{fontWeight: 'bold', fontStyle: 'italic'}">Jason</p>
+<input class="text-field__input" v-model="message">
+<p :style="{textTransform: 'uppercase'}">{{ message }}</p>
+<br>
+<input class="text-field__input" v-model="number">
+<p>{{ number*number }}</p>
 </template>
 
 <style>
