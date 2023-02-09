@@ -1,26 +1,34 @@
 <script>
-	export default {
-		data() {
-      return {
+  export default{
+    data(){
+      return{
         visible: true,
-	}
-  },
-  methods: {
-	hide: function() {
-		this.visible = false;
-	},
-  mide: function() {
-		this.visible = true;
-	}
-}
-  
-	}
+        visible2: true,
+        visible3: true,
+      }
+    },
+    methods: {
+      Alex: function() {
+        this.visible = !this.visible;
+      },
+      Jason: function () {
+        this.visible2 = !this.visible2;
+      },
+      Paul: function () {
+        this.visible3 = !this.visible3;
+      }
+    }
+  }
 </script>
+
 <template>
-  <button @click="hide">hide</button>
-  <button @click="visible">visible</button>
-	<p v-if="visible">text</p>
-</template>
+  <button @click="Alex">Alex</button>
+  <p v-if="visible">Alex</p>
+  <button @click="Jason">Jason</button>
+  <p v-if="visible2">Jason</p>
+  <button @click="Paul">Paul</button>
+  <p v-if="visible3">Paul</p>
+  </template>
 
 <style>
 
