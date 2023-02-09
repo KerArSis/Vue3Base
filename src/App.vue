@@ -2,25 +2,23 @@
 export default{
 data(){
 return{
-    text: ' ',
-    conclave: ' ',
+    checked: true,
+    visible: true,
 }
 },
 methods: {
-list: function(){
-}
+BMW: function () {
+    this.checked = false;
+    this.visible = !this.visible;
+},
 }
 }
 </script>
 
 <template>
-<textarea class="text-field__input" v-model="text"></textarea>
-<p>{{ text }}</p>
-<br>
-<button @click="Alex">Alex</button>
-<ul>
-<li v-for="Text in text">{{ Text }}</li>
-</ul>
+<input class="text-field__input" type="checkbox" v-model="checked"> 
+<button @click="BMW">BMW</button>
+<p v-if="visible">{{ checked ? 'Alex' : 'Jason' }}</p>
 </template>
 
 <style>
