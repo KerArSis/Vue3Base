@@ -1,16 +1,25 @@
 <script>
-  export default{
-    data(){
-      return{
-        age: 25,
+  export default {
+    data() {
+      return {
+        bmw: true,
+      }
+    },
+    methods: {
+      BMW: function() {
+        this.bmw = false;
       }
     }
   }
 </script>
+
 <template>
-  <p v-if="age < 18">Подросток</p>
-  <p v-else-if="19 < age && age < 25">Молодой человек</p>
-  <p v-else="age > 26">Мужчина</p>
+  <button @click="BMW">BMW</button>
+  <div v-if="bmw">
+  <p>Alex</p>
+  <p>Jason</p>
+  <p>Paul</p>
+  </div>
 </template>
 
 <style>
