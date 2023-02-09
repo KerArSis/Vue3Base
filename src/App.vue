@@ -2,23 +2,27 @@
 export default{
 data(){
 return{
-    checked: true,
-    visible: true,
+    languages: [],
 }
-},
-methods: {
-BMW: function () {
-    this.checked = false;
-    this.visible = !this.visible;
-},
 }
 }
 </script>
 
 <template>
-<input class="text-field__input" type="checkbox" v-model="checked"> 
-<button @click="BMW">BMW</button>
-<p v-if="visible">{{ checked ? 'Alex' : 'Jason' }}</p>
+<div>
+<input type="checkbox" v-model="languages" value="Информатика">
+<label>Информатика</label>
+<br>
+<input type="checkbox" v-model="languages" value="Математика">
+<label>Математика</label>
+<br>
+<input type="checkbox" v-model="languages" value="Английский">
+<label>Английский</label>
+<ol>
+<li v-for="elem in languages">{{ elem }}</li>
+</ol>
+</div>
+<br>
 </template>
 
 <style>
