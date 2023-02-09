@@ -2,18 +2,15 @@
 export default{
 data(){
 return{
+    cssClasses: 'text',
 }
 }
 }
 </script>
-
 <template>
-<p>Alex</p>
-<p1>Jason</p1>
+<p :class="cssClasses">text</p>
 </template>
 
 <style>
-  p {
-    color: red;
-  }
+  
 </style>
