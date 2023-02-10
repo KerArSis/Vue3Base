@@ -8,7 +8,7 @@ components: {
 </script>
 
 <template>
-<BMW />
+<BMW name="Arsen" surn="Kerimov" age="19"/>
 </template>
 
 <style>
