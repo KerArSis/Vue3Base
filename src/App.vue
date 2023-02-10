@@ -10,18 +10,18 @@ components: {
     BMW
 },
 methods: {
-    BMW() {
-    alert('Alex, Jason, Paul');
+    aaa(name) {
+    console.log(name);
     },
-    bmw(){
-    alert('Jace, Tom, Ben')
+    bbb(name, salary){
+console.log(name, salary);
     }
 }
 }
 </script>
 
 <template>
-<BMW @show="BMW" @show1="bmw" />
+<BMW @show="aaa" @show1="bbb"/>
 </template>
 
 <style>
