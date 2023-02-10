@@ -2,19 +2,28 @@
 export default{
 data(){
 return{
-Alex: ' ',
-Jason: ' '
+    bmw: '',
+    BMW: ['Alex', 'Jason', 'Paul'],
+}
+},
+methods: {
+addBMW: function () {
+    this.BMW.unshift(this.bmw);
 }
 }
 }
 </script>
 
 <template>
-<input class="text-field__input" v-model="Alex">
-<p>{{ Alex }}</p>
+<ul class="styled">
+<li v-for="(item, index) in 
+			BMW" :key="index">
+    {{ item }}
+</li>
+</ul>
+<input class="text-field__input" v-model="bmw">
 <br>
-<a href="#" class="inline-link-1" >Alex</a>
-<p ></p>
+<button @click="addBMW">add</button>
 </template>
 
 <style>
