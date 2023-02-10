@@ -8,38 +8,48 @@ return{
         name: 'Arsen',
         surn: 'Kerimov',
         salary: 100,
-				age: 19,
+		age: 19,
     },
     {
         id: 2,
-        name: 'ALex',
+        name: 'Alex',
         surn: 'Bane',
         salary: 200,
-				age: 18,
+		age: 18,
     },
     {
         id: 3,
         name: 'Jason',
         surn: 'Lightwood',
         salary: 300,
-				age: 25,
+		age: 25,
     },
     ],
 }
 },
 methods: {
-removeStudents: function (id) {
-    this.students = this.students.filter((student) => {
-    return student.id !== id;
-    })
-}
+edit(student) {
+    student.isEdit = true;
+},
+save(student) {
+    student.isEdit = false;
+},
 }
 }
 </script>
 
 <template>
 <table>
-<tr v-for="student in students" :key="student.id"> {{ student.name }} {{ student.surn }} {{ student.salary }} {{ student.age }} <button class="button" @click="removeStudents(students.id)">remove</button>
+<tr v-for="student in students" :key="student.id"> 
+<template v-if="!student.isEdit">
+{{ student.name }} {{ student.surn }} {{ student.salary }} {{ student.age }}<button class="button" @click="edit(student)">изменить</button>
+</template>
+<template v-else>
+<input v-model="student.name">
+<input v-model="student.surn">
+<input v-model="student.salary">
+<input v-model="student.age"><button class="button" @click="save(student)">сохранить</button>
+</template>
 </tr>
 </table>
 </template>
