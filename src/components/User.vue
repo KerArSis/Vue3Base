@@ -1,8 +1,8 @@
 <script>
 export default {
+    props: ['name', 'surn', 'age'],
     data() {
         return {
-name: "Alex"
         }
     }
 }
@@ -10,4 +10,6 @@ name: "Alex"
 
 <template>
 <p>{{ name }}</p>
+<p>{{ surn }}</p>
+<p >{{ age }}</p>
 </template>

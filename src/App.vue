@@ -1,14 +1,14 @@
 <script>
 import BMW from './components/User.vue'
 export default {
-  components: {
+components: {
     BMW
-  }
+}
 }
 </script>
 
 <template>
-<BMW />
+<BMW name="Arsen" surn="Kerimov" age="19"/>
 </template>
 
 <style>
