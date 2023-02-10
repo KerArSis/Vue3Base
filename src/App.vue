@@ -1,5 +1,6 @@
 <script>
 import BMW from './components/User.vue'
+import UserForm from './components/UserForm.vue'
 export default {
 data() {
     return {
@@ -23,25 +24,21 @@ data() {
     }
 },
 components: {
-    BMW
+    BMW, UserForm
 },
 methods: {
-    remove(id) {
-    this.bmw = this.bmw.filter((bmws) => {
-        return bmws.id !== id;
-    })
+    add(name, surn){
+    let id = this.bmw.length + 1;
+    this.bmw.push({
+        id, name, surn
+    });
     }
 }
 }
 </script>
 
 <template>
-<BMW v-for   ="bmws in bmw"
-		:id     ="bmws.id"
-		:name   ="bmws.name"
-		:surn   ="bmws.surn"
-		@remove ="remove"
-		:key    ="bmws.id"/>
+<UserForm @add="add"/>
 </template>
 
 <style>
