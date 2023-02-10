@@ -7,23 +7,22 @@ return{
 }
 },
 methods: {
-addBMW: function () {
-    this.BMW.unshift(this.bmw);
+removeBMW: function (index) {
+    this.BMW.splice(index, 1);
 }
 }
 }
 </script>
 
 <template>
-<ul class="styled">
+<ul>
 <li v-for="(item, index) in 
 			BMW" :key="index">
     {{ item }}
+    <br>
+    <button @click="removeBMW(index)">remove</button>
 </li>
 </ul>
-<input class="text-field__input" v-model="bmw">
-<br>
-<button @click="addBMW">add</button>
 </template>
 
 <style>
