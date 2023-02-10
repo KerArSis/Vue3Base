@@ -10,18 +10,15 @@ components: {
     BMW
 },
 methods: {
-    aaa(name) {
+    bmwName(name) {
     console.log(name);
     },
-    bbb(name, salary){
-console.log(name, salary);
-    }
 }
 }
 </script>
 
 <template>
-<BMW @show="aaa" @show1="bbb"/>
+<BMW @show="bmwName"/>
 </template>
 
 <style>
